@@ -1,0 +1,178 @@
+
+/* 1. Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Light theme colors */
+:root {
+    --background: #ffffff;
+    --text: #222222;
+    --surface: #f2f2f2;
+    --accent: #2563eb;
+}
+
+/* 3. General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 4. Header */
+header {
+    padding: 20px 8%;
+    background: var(--surface);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* 5. Theme button */
+button {
+    padding: 10px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: white;
+}
+
+/* 6. Main content */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* 7. Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--surface);
+}
+
+/* 8. Dark theme */
+body.dark-theme {
+    --background: #121212;
+    --text: #f5f5f5;
+    --surface: #202020;
+    --accent: #60a5fa;
+}
+
+/* 9. Mobile responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+}
+
+
+/* =========================
+   DESIGN IMPROVEMENTS
+========================= */
+
+/* Better page width */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* Hero section */
+#home {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#home h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    margin: 10px 0;
+}
+
+#home h2 {
+    color: var(--accent);
+}
+
+/* Paragraph styling */
+section p {
+    max-width: 650px;
+}
+
+/* Section separators */
+section:not(:first-child) {
+    border-top: 1px solid var(--surface);
+}
+
+/* Better buttons */
+button {
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Better footer */
+footer {
+    margin-top: 40px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 20px;
+    }
+
+    #home {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+    nav {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    button {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
